@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="coo">
     <header><%- include('layouts/head.ejs')%></header>
     <main>
         <section class="sec" >
@@ -16,14 +16,14 @@
                 <div class="fex">
                     <h3><%=ele.character%></h3>
                     <img src="<%=ele.image%>" alt="">
-                    <p><%=ele.quote%></p>
+                    <p class="fixsize"><%=ele.quote%></p>
 
                
-                </form>
-                <form action="/update/<%=ele.id%>?_method=put" method="POST">
-                <input type="text" value="<%=ele.character%>" name="character"><br>
-                <input type="text" value="<%=ele.image%>"  name="image"><br>
-                <input type="text" value="<%=ele.quote%>" name="quote"><br>
+                
+                <form action="/update/<%=ele.id%>?_method=put" method="POST" class="fff">
+                <input type="text" value="<%=ele.character%>" name="character">
+                <input type="text" value="<%=ele.image%>"  name="image">
+                <input type="text" value="<%=ele.quote%>" name="quote">
                 <input type="hidden" value="<%=ele.characterDirection%>" name="characterDirection">
 
                 <button type="submit">update</button>

@@ -12,3 +12,13 @@ p{
     width: 44%;
 
 }
+ul li {
+    display: inline;
+    color: rgb(238, 255, 249);
+}
+.fixsize{
+    padding-left: 20px;
+}
+.fff{
+    padding-left: 20px;
+}
