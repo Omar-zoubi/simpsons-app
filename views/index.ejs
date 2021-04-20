@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="coo">
+    <header>
+        <%- include('layouts/head.ejs')%>
+    </header>
+    <main>
+        <section class="sec">
+            <% returneddata.forEach(ele=> {%>
+
+                <div class="showdiv">
+                    <h3 class="butt">
+                        <%=ele.character%>
+                    </h3>
+                    <img src="<%=ele.image%>" class="fixsize"alt="">
+                    <p class="fixsize">
+                        <%=ele.quote%>
+                    </p>
+
+
+                    <form action="/savetodata" method="POST">
+                        <input type="hidden" value="<%=ele.character%>" name="character"><br>
+                        <input type="hidden" value="<%=ele.image%>" name="image"><br>
+                        <input type="hidden" value="<%=ele.quote%>" name="quote"><br>
+                        <button type="submit" class="butt">Save to fave</button>
+                
+
+                    </form>
+                </div>
+                <% })%>
+
+
+
+
+        </section>
+
+
+    </main>
+    <footer>
+        <%- include('layouts/nave.ejs')%>
+    </footer>
+
+</body>
+
+</html>

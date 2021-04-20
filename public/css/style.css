@@ -1,0 +1,16 @@
+.sec{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.showdiv{
+    width: 35%;
+    background-color: aqua;
+    margin: 25px;
+}
+.butt{
+margin-left: 200px;
+}
+.coo{
+    background-color: rgb(45, 63, 63);
+}

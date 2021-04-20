@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><%- include('layouts/head.ejs')%></header>
+    <main>
+        <section class="sec" >
+
+
+            <% alval.forEach(ele=> {%>
+                <div class="fex">
+                    <h3><%=ele.character%></h3>
+                    <img src="<%=ele.image%>" alt="">
+                    <p><%=ele.quote%></p>
+
+               
+                </form>
+                <form action="/update/<%=ele.id%>?_method=put" method="POST">
+                <input type="text" value="<%=ele.character%>" name="character"><br>
+                <input type="text" value="<%=ele.image%>"  name="image"><br>
+                <input type="text" value="<%=ele.quote%>" name="quote"><br>
+                <input type="hidden" value="<%=ele.characterDirection%>" name="characterDirection">
+
+                <button type="submit">update</button>
+
+                
+                <form action="/update/<%=ele.id%>?_method=delete" method="POST">
+                    <button type="submit">delete</button>
+        
+                </form>
+            </div>
+          <%  })%>
+        
+        
+
+
+        </section>
+
+
+
+    </main>
+    <footer><%- include('layouts/nave.ejs')%></footer>
+    
+</body>
+</html>

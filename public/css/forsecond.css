@@ -1,0 +1,14 @@
+.sec{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fex{
+    width: 44%;
+    background-color: rgb(86, 224, 224);
+    margin: 25px;
+
+}
+p{
+    width: 44%;
+
+}
